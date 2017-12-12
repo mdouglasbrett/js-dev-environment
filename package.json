@@ -2,7 +2,10 @@
   "name": "js-dev-environment",
   "version": "1.0.0",
   "description": "Starter JavaScript development environment",
-  "scripts": {},
+  "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "node buildScripts/srcServer.js"
+  },
   "author": "Michael Brett",
   "license": "MIT",
   "dependencies": {
