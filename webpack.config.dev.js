@@ -2,7 +2,7 @@ import path from 'path';
 
 export default {
   debug: true,
-  devtool: 'inline-source-map',
+  devtool: 'inline-source-map', // check other settings. Quality vs speed
   noInfo: false,
   entry: [
     path.resolve(__dirname, 'src/index')
