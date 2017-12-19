@@ -9,9 +9,9 @@ function get(url) {
 }
 
 function onSuccess(response) {
-  return response.json;
+  return response.json();
 }
 
 function onError(error) {
-  console.log(error);
+  console.log(error); // eslint-disable-line no-console
 }
