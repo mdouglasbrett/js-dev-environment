@@ -63,3 +63,6 @@ src/api/db.json
 
 # WebStorm
 .idea/
+
+# Dist directory
+dist/

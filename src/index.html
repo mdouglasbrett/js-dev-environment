@@ -1,6 +1,12 @@
+<!--
+This template uses ejs and HtmlWebpackPlugin to conditionally load some fake error tracking scripts
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <% if (htmlWebpackPlugin.options.errorTracking) { %>
+  <script type="text/javascript">console.log('<%=htmlWebpackPlugin.options.errorTracking%>')</script>
+  <% } %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
