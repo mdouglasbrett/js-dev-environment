@@ -60,3 +60,6 @@ typings/
 # Mock json
 
 src/api/db.json
+
+# WebStorm
+.idea/
