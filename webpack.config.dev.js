@@ -2,9 +2,10 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  debug: true,
+  // TODO: commented out properties relating to changes in the Webpack API 1.x => ^2.x
+  // debug: true,
   devtool: 'inline-source-map', // check other settings. Quality vs speed
-  noInfo: false,
+  // noInfo: false,
   entry: [
     path.resolve(__dirname, 'src/index')
   ],
@@ -12,7 +13,7 @@ export default {
   output: {
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
-    fileName: 'bundle.js'
+    filename: 'bundle.js'
   },
   plugins: [
     // Create index.html that includes reference to bundled JS
@@ -23,8 +24,9 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style', 'css']}
+      // TODO: Webpack API requires 'loader' suffix in ^2.x
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+      {test: /\.css$/, loaders: ['style-loader', 'css-loader']}
     ]
   }
 }

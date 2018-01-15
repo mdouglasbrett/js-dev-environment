@@ -11,7 +11,8 @@ const app = express();
 const compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
+  // TODO: Webpack API changes 1.x => ^2.x
+  // noInfo: true,
   publicPath: config.output.publicPath
 }));
 
